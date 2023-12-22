@@ -4,6 +4,7 @@ data class GameModel (
     val id: Int,
     val title: String,
     val thumbnail: String,
+    val publisher: String,
     val short_description: String
 
 

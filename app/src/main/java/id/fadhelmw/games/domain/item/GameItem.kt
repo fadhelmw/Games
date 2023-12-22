@@ -7,8 +7,9 @@ data class GameItem (
     val id: Int,
     val title: String,
     val thumbnail: String,
+    val publisher: String,
     val short_description: String
 
 )
 
-fun GameModel.toGameItem() = GameItem(id, title, thumbnail, short_description)
+fun GameModel.toGameItem() = GameItem(id, title, thumbnail, publisher, short_description)
