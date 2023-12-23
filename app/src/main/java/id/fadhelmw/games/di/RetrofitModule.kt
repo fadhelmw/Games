@@ -10,11 +10,13 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+// Modul Dagger-Hilt yang menyediakan Retrofit dan GamesApi sebagai dependensi
 @Module
 @InstallIn(SingletonComponent::class)
 object RetrofitModule {
     @Singleton
     @Provides
+    // fungsi untuk menyediakan instance Retrofit dengan base URL dan converter JSON (Gson)
     fun provideRetrofit(): Retrofit {
 
         return Retrofit.Builder()
@@ -22,9 +24,9 @@ object RetrofitModule {
             .addConverterFactory(GsonConverterFactory.create())
                 .build()
     }
-
     @Singleton
     @Provides
+    // fungsi untuk menyediakan instance GamesApi berdasarkan instance Retrofit
     fun provideGamesApi(retrofit: Retrofit): GamesApi {
         return retrofit.create(GamesApi::class.java)
     }

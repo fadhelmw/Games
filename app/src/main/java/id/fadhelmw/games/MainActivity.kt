@@ -14,9 +14,11 @@ import dagger.hilt.android.AndroidEntryPoint
 import id.fadhelmw.games.ui.nav.SetupNavHost
 import id.fadhelmw.games.ui.theme.GamesTheme
 
+// Kelas MainActivity sebagai entry point aplikasi yang menggunakan AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
+    // Fungsi onCreate untuk inisialisasi aktivitas
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
